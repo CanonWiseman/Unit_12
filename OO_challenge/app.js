@@ -38,10 +38,10 @@ class Garage {
 
     add(newVehicle){
         if(!(newVehicle instanceof Vehicle)){
-            throw new error("ONLY VEHICLES CAN BE PARKED IN THE GARAGE")
+            return "ONLY VEHICLES CAN BE PARKED IN THE GARAGE";
         }
         if(this.vehicles.length >= this.cap){
-            throw new error("THE GARAGE IS AT CAPACITY")
+            return "THE GARAGE IS AT CAPACITY";
         }
         this.vehicles.push(newVehicle);
         return "PARKED!";
